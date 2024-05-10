@@ -25,11 +25,12 @@ public class ShoppingCartTest extends BaseTest {
     }
 
     @Test
-    public void compareFirstProductNamesTest() {
+    public void compareFirstProductNamesTest() throws InterruptedException {
         WebElement firstProductElement = productListingPage.getFirstProduct();
         String firstProductName = productListingPage.getProductName(firstProductElement);
         CartPage cartPage = productListingPage.addToCartBtnClick(firstProductElement);
 
+        Thread.sleep(500);
         List<String> allCartProductsNames = cartPage.getAllProductsNames();
 
         assertEquals(allCartProductsNames.size(), 1);

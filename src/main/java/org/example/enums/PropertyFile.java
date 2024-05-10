@@ -2,8 +2,7 @@ package org.example.enums;
 
 public enum PropertyFile {
 
-    CONFIG("config.properties"),
-    EMAIL("email.properties");
+    CONFIG("config.properties");
 
     private String pathToFile;
 
